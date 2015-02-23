@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Essays</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+  <span id="home"><%= link_to 'All Essays', essays_path %><br></span>
+  <span id="submit"><%= link_to 'Submit an Essay', new_essay_path %></span>
+  <div id="clear-span"></div>
+</nav>
+
+<div class="container">
+<%= yield %>
+</div>
+
+</body>
+</html>

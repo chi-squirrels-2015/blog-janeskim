@@ -1,0 +1,9 @@
+<h1>Works by Zadie Smith</h1>
+
+<% @essays.each do |essay| %>
+  <div class="essay-block">
+    <%= link_to essay.title, essay_path(essay), class: "index-title" %><br>
+  </div>
+<% end %>
+
+

@@ -1,0 +1,13 @@
+<h2 class="essay-title"><%= @essay.title %></h2>
+<h4 class="essay-details"><%= @essay.date.to_formatted_s(:long) %><br>
+    <%= @essay.publication %></h4>
+<hr></hr>
+
+<div class="display-essay-text">
+  <%= simple_format(@essay.essay_text) %>
+</div>
+
+<br><hr></hr><br>
+
+<p><%= link_to 'Remove Essay', essay_path(@essay), method: :delete %></p>
+<p><%= link_to 'Edit Essay', edit_essay_path(@essay) %></p>
